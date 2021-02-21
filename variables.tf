@@ -26,3 +26,16 @@ variable "ecs_domain_name" {
   type        = string
   description = "Your platform domain name"
 }
+
+// Application
+variable "ecs_service_name" {}
+variable "docker_container_port" {}
+variable "desired_task_number" {}
+variable "spring_profile" {
+  default = "default"
+}
+variable "memory" {}
+variable "aws_account" {}
+variable "service_tag" {
+  description = "docker image version tag"
+}

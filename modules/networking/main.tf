@@ -23,6 +23,11 @@ resource "aws_internet_gateway" "ig" {
 resource "aws_eip" "nat_eip" {
   vpc        = true
   depends_on = [aws_internet_gateway.ig]
+
+  tags = {
+    Name        = "${var.environment}-nat-eip"
+    Environment = var.environment
+  }
 }
 
 /* NAT */
