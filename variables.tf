@@ -6,7 +6,7 @@ variable "environment" {
   description = "The Deployment environment"
 }
 
-//Networking
+// Networking
 variable "vpc_cidr" {
   description = "The CIDR block of the vpc"
 }
@@ -19,4 +19,10 @@ variable "public_subnets_cidr" {
 variable "private_subnets_cidr" {
   type        = list(any)
   description = "The CIDR block for the private subnet"
+}
+
+// Platform
+variable "ecs_domain_name" {
+  type        = string
+  description = "Your platform domain name"
 }
